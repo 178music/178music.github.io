@@ -1,442 +1,302 @@
-/* JS Document */
+;(function($){
+    "use strict"
+    var nav_offset_top = $('.header_area').height()+50; 
+    /*-------------------------------------------------------------------------------
+	  Navbar 
+	-------------------------------------------------------------------------------*/
 
-/******************************
+	//* Navbar Fixed  
+    function navbarFixed(){
+        if ( $('.header_area').length ){ 
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();   
+                if (scroll >= nav_offset_top ) {
+                    $(".header_area").addClass("navbar_fixed");
+                } else {
+                    $(".header_area").removeClass("navbar_fixed");
+                }
+            });
+        };
+    };
+    navbarFixed();
+    
+    function testimonialSlider(){
+        if ( $('.testimonial_slider').length ){
+            $('.testimonial_slider').owlCarousel({
+                loop:true,
+                margin: 30,
+                items: 2,
+                nav:false,
+                autoplay: true,
+                dots: true,
+                smartSpeed: 1500,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                }
+            })
+        }
+    }
+    testimonialSlider();
+    
+    //------- Mailchimp js --------//  
 
-[Table of Contents]
-
-1. Vars and Inits
-2. Set Header
-3. Init Menu
-4. Init Home Slider
-5. Init Dropdown
-6. Init Scrolling
-7. Init Single Player
-8. Init Album Player
-9. Init Parallax
-
-
-******************************/
-
-$(document).ready(function()
-{
-	"use strict";
-
-	/* 
-
-	1. Vars and Inits
-
-	*/
-
-	var header = $('.header');
-	var cdd = $('.custom_dropdown');
-	var cddActive = false;
-
-	initMenu();
-	initHomeSlider();
-	initDropdown();
-	initScrolling();
-	initSinglePlayer();
-	initAlbumPlayer();
-	initParallax();
-
-	setHeader();
-
-	$(window).on('resize', function()
-	{
-		setHeader();
-
-		setTimeout(function()
-		{
-			$(window).trigger('resize.px.parallax');
-		}, 375);
-	});
-
-	$(document).on('scroll', function()
-	{
-		setHeader();
-	});
-
-	/* 
-
-	2. Set Header
-
-	*/
-
-	function setHeader()
-	{
-		if($(window).scrollTop() > 91)
-		{
-			header.addClass('scrolled');
-		}
-		else
-		{
-			header.removeClass('scrolled');
-		}
+    function mailChimp(){
+        $('#mc_embed_signup').find('form').ajaxChimp();
+    }
+    mailChimp();
+    
+    /* ===== Parallax Effect===== */
+	
+	function parallaxEffect() {
+    	$('.bg-parallax').parallax();
 	}
-
-	/* 
-
-	3. Init Menu
-
-	*/
-
-	function initMenu()
-	{
-		if($('.menu').length && $('.hamburger').length)
-		{
-			var menu = $('.menu');
-			var hamburger = $('.hamburger');
-			var close = $('.menu_close');
-
-			hamburger.on('click', function()
-			{
-				menu.toggleClass('active');
-			});
-
-			close.on('click', function()
-			{
-				menu.toggleClass('active');
-			});
-		}
-	}
-
-	/* 
-
-	4. Init Home Slider
-
-	*/
-
-	function initHomeSlider()
-	{
-		if($('.home_slider').length)
-		{
-			var homeSlider = $('.home_slider');
-			homeSlider.owlCarousel(
-			{
-				items:1,
-				loop:true,
-				autoplay:false,
-				nav:false,
-				dots:false,
-				smartSpeed:1200,
-				mouseDrag:false
-			});
-
-			if($('.home_slider_nav').length)
-			{
-				var next = $('.home_slider_nav');
-				next.on('click', function()
-				{
-					homeSlider.trigger('next.owl.carousel');
-				});
-			}
-		}
-	}
-
-	/* 
-
-	5. Init Dropdown
-
-	*/
-
-	function initDropdown()
-	{
-		if($('.custom_dropdown').length)
-		{
-			var dd = $('.custom_dropdown');
-			var ddItems = $('.custom_dropdown ul li');
-			var ddSelected = $('.custom_dropdown_selected');
-
-			dd.on('click', function()
-			{
-				if(cddActive)
-				{
-					closeCdd();
-				}
-				else
-				{
-					openCdd();
-					$(document).one('click', function cls(e)
-					{
-						if($(e.target).hasClass('cdd'))
-						{
-							$(document).one('click', cls);
-						}
-						else
-						{
-							closeCdd();
-						}
-					});
-				}
-			});
-
-			ddItems.on('click', function()
-			{
-				var sel = $(this).text();
-				ddSelected.text(sel);
-			});
-		}
-	}
-
-	function closeCdd()
-	{
-		cdd.removeClass('active');
-		cddActive = false;
-	}
-
-	function openCdd()
-	{
-		cdd.addClass('active');
-		cddActive = true;
-	}
-
-	/*
-
-	6. Init Scrolling
-
-	*/
-
-	function initScrolling()
-    {
-    	if($('.scroll_down_link').length)
-    	{
-    		var links = $('.scroll_down_link');
-	    	links.each(function()
-	    	{
-	    		var ele = $(this);
-	    		var target = ele.data('scroll-to');
-	    		ele.on('click', function(e)
-	    		{
-	    			e.preventDefault();
-	    			$(window).scrollTo(target, 1500, {offset: -75, easing: 'easeInOutQuart'});
-	    		});
-	    	});
-    	}	
+	parallaxEffect();
+    
+    
+    $('select').niceSelect();
+    $('#datetimepicker11,#datetimepicker1').datetimepicker({
+        daysOfWeekDisabled: [0, 6]
+    });
+    
+     /*---------gallery isotope js-----------*/
+    function galleryMasonry(){
+        if ( $('#gallery').length ){
+            $('#gallery').imagesLoaded( function() {
+              // images have loaded
+                // Activate isotope in container
+                $("#gallery").isotope({
+                    itemSelector: ".gallery_item",
+                    layoutMode: 'masonry',
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'linear'
+                    }
+                });
+            })
+        }
+    }
+    galleryMasonry();
+	
+	/*----------------------------------------------------*/
+    /*  Simple LightBox js
+    /*----------------------------------------------------*/
+    $('.imageGallery1 .light').simpleLightbox();
+    
+    /*----------------------------------------------------*/
+    /*  Google map js
+    /*----------------------------------------------------*/
+    
+    if ( $('#mapBox').length ){
+        var $lat = $('#mapBox').data('lat');
+        var $lon = $('#mapBox').data('lon');
+        var $zoom = $('#mapBox').data('zoom');
+        var $marker = $('#mapBox').data('marker');
+        var $info = $('#mapBox').data('info');
+        var $markerLat = $('#mapBox').data('mlat');
+        var $markerLon = $('#mapBox').data('mlon');
+        var map = new GMaps({
+        el: '#mapBox',
+        lat: $lat,
+        lng: $lon,
+        scrollwheel: false,
+        scaleControl: true,
+        streetViewControl: false,
+        panControl: true,
+        disableDoubleClickZoom: true,
+        mapTypeControl: false,
+        zoom: $zoom,
+            styles: [
+                {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#dcdfe6"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "stylers": [
+                        {
+                            "color": "#808080"
+                        },
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#dcdfe6"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "weight": 1.8
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#d7d7d7"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#ebebeb"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#a7a7a7"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#efefef"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#696969"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#737373"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#d6d6d6"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {},
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#dadada"
+                        }
+                    ]
+                }
+            ]
+        });
     }
 
-    /* 
-
-	7. Init Single Player
-
-	*/
-
-	function initSinglePlayer()
-	{
-		if($(".jp-jplayer").length)
-		{
-			$("#jplayer_1").jPlayer({
-				ready: function () {
-					$(this).jPlayer("setMedia", {
-						title:"Better Days",
-							artist:"Bensound",
-							mp3:"files/bensound-betterdays.mp3"
-					});
-				},
-				play: function() { // To avoid multiple jPlayers playing together.
-					$(this).jPlayer("pauseOthers");
-				},
-				swfPath: "plugins/jPlayer",
-				supplied: "mp3",
-				cssSelectorAncestor: "#jp_container_1",
-				wmode: "window",
-				globalVolume: false,
-				useStateClassSkin: true,
-				autoBlur: false,
-				smoothPlayBar: true,
-				keyEnabled: true,
-				solution: 'html',
-				preload: 'metadata',
-				volume: 0.2,
-				muted: false,
-				backgroundColor: '#000000',
-				errorAlerts: false,
-				warningAlerts: false
-			});
-		}
-	}
-
-	/* 
-
-	8. Init Album Player
-
-	*/
-
-	function initAlbumPlayer()
-	{
-		if($('#jplayer_2').length)
-		{
-			var playlist = 
-			[
-				{
-					title:"Better Days",
-					artist:"Bensound",
-					album:"Ocean Vibes",
-					mp3:"files/bensound-betterdays.mp3",
-					poster:"images/featured_1.jpg"
-				},
-				{
-					title:"Dubstep",
-					artist:"Bensound",
-					album:"DJ Mind",
-					mp3:"files/bensound-dubstep.mp3",
-					poster:"images/featured_2.jpg"
-				},
-				{
-					title:"Sunny",
-					artist:"Bensound",
-					album:"Dublin Dub",
-					mp3:"files/bensound-sunny.mp3",
-					poster:"images/featured_3.jpg"
-				},
-				{
-					title:"Better Days",
-					artist:"Bensound",
-					album:"Ocean Vibes",
-					mp3:"files/bensound-betterdays.mp3",
-					poster:"images/featured_4.jpg"
-				},
-				{
-					title:"Dubstep",
-					artist:"Bensound",
-					album:"DJ Mind",
-					mp3:"files/bensound-dubstep.mp3",
-					poster:"images/featured_5.jpg"
-				},
-				{
-					title:"Sunny",
-					artist:"Bensound",
-					album:"Dublin Dub",
-					mp3:"files/bensound-sunny.mp3",
-					poster:"images/featured_6.jpg"
-				}
-			];
-
-			var options =
-			{
-				playlistOptions:
-				{
-					autoPlay:false,
-					enableRemoveControls:false
-				},
-				play: function() // To avoid multiple jPlayers playing together.
-				{ 
-					$(this).jPlayer("pauseOthers");
-				},
-				solution: 'html',
-				supplied: 'oga, mp3',
-				useStateClassSkin: true,
-				preload: 'metadata',
-				volume: 0.2,
-				muted: false,
-				backgroundColor: '#000000',
-				cssSelectorAncestor: '#jp_container_2',
-				errorAlerts: false,
-				warningAlerts: false
-			};
-
-			var cssSel = 
-			{
-				jPlayer: "#jplayer_2",
-				cssSelectorAncestor: "#jp_container_2",
-				play: '.jp-play',
-				pause: '.jp-pause',
-				stop: '.jp-stop',
-				seekBar: '.jp-seek-bar',
-				playBar: '.jp-play-bar',
-				globalVolume: true,
-				mute: '.jp-mute',
-				unmute: '.jp-unmute',
-				volumeBar: '.jp-volume-bar',
-				volumeBarValue: '.jp-volume-bar-value',
-				volumeMax: '.jp-volume-max',
-				playbackRateBar: '.jp-playback-rate-bar',
-				playbackRateBarValue: '.jp-playback-rate-bar-value',
-				currentTime: '.jp-current-time',
-				duration: '.jp-duration',
-				title: '.jp-title',
-				fullScreen: '.jp-full-screen',
-				restoreScreen: '.jp-restore-screen',
-				repeat: '.jp-repeat',
-				repeatOff: '.jp-repeat-off',
-				gui: '.jp-gui',
-				noSolution: '.jp-no-solution'
-			};
-
-			var myPlaylist = new jPlayerPlaylist(cssSel,playlist,options);
-			
-			
-			setTimeout(function()
-			{
-				var items = $('.jp-playlist ul li > div');
-				for(var x = 0; x < items.length; x++)
-				{
-					var item = items[x];
-					var img = playlist[x].poster;
-					var album = playlist[x].album;
-					var title = playlist[x].title;
-					var imageDiv = document.createElement('div');
-					var imgx = document.createElement('img');
-					var albumDiv = document.createElement('div');
-					albumDiv.className = "featured_album";
-					var albumText = document.createTextNode(album);
-					var playButton = document.createElement('div');
-					var titleDiv = document.createElement('div');
-					titleDiv.className = "featured_title";
-					var titleText = document.createTextNode(title);
-					titleDiv.append(titleText);
-					playButton.className = 'album_play_button';
-					albumDiv.prepend(albumText);
-					imageDiv.className = "featured_image";
-					imgx.src = img;
-					imageDiv.append(imgx);
-					item.parentElement.append(imageDiv);
-					item.parentElement.append(playButton);
-					item.append(albumDiv);
-					item.append(titleDiv);
-				}
-
-				var buttons = $('.album_play_button');
-				buttons.each(function()
-				{
-					var btn = $(this);
-					btn.on('click', function(e)
-					{
-						var i = buttons.index(btn);
-						myPlaylist.select(i);
-
-						if(btn.hasClass('is-playing'))
-						{
-							buttons.removeClass('is-playing');
-							myPlaylist.pause();
-							btn.removeClass('is-playing');
-						}
-						else
-						{
-							buttons.removeClass('is-playing');
-							myPlaylist.play();
-							btn.addClass('is-playing');
-						}
-					});
-				});
-			},200);	
-		}
-	}
-
-	/* 
-
-	9. Init Parallax
-
-	*/
-
-	function initParallax()
-	{
-		if($('.parallax_background').length)
-		{
-			$('.parallax_background').parallax(
-			{
-				speed:0.8
-			});
-		}
-	}
-
-});
+})(jQuery)

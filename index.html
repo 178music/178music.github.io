@@ -1,602 +1,732 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
 <head>
-<title>Music</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Music template project">
+<title>178Music </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
-</head>
-<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="178music, an Online Music Provider" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.css" type='text/css' />
+<!-- //lined-icons -->
+ <!-- Meters graphs -->
+<script src="js/jquery-2.1.4.js"></script>
 
-<div class="super_container">
-	
-	<!-- Header -->
 
-	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="header_content d-flex flex-row align-items-center justify-content-center">
+</head> 
+    	 <!-- /w3layouts-agile -->
+ <body class="sticky-header left-side-collapsed"  onload="initMap()">
+    <section>
+      <!-- left side start-->
+		<div class="left-side sticky-left-side">
 
-						<!-- Logo -->
-						<div class="logo">
-							<a href="#" class="d-flex flex-row align-items-end justify-content-start">
-								<span class="logo_bars d-flex flex-row align-items-end justify-content-between"><span></span><span></span><span></span><span></span><span></span></span>
-								<span class="logo_text">music</span>
-							</a>
-						</div>
-
-						<!-- Main Navigation -->
-						<nav class="main_nav">
-							<ul class="d-flex flex-row align-items-center justify-content-start">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="artists.html">Artists</a></li>
-								<li><a href="#">Download Music</a></li>
-								<li><a href="blog.html">News</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav>
-
-						<!-- User area -->
-						<div class="log_reg d-flex flex-row align-items-center justify-content-start">
-							<ul class="d-flex flex-row align-items-start justify-content-start">
-								<li><a href="#">Login</a></li>
-								<li><a href="#">Register</a></li>
-							</ul>
-
-							<!-- Hamburger -->
-							<div class="hamburger d-flex flex-column align-items-end justify-content-between"><div></div><div></div><div></div></div>
-						</div>
-					</div>
-				</div>
+			<!--logo and iconic logo start-->
+			<div class="logo">
+				<h1><a href="index.html">178musi<span>c</span></a></h1>
 			</div>
-		</div>
-	</header>
+			<div class="logo-icon text-center">
+				<a href="index.html">178</a>
+			</div>
+ 	 <!-- /w3l-agile -->
+			<!--logo and iconic logo end-->
+			<div class="left-side-inner">
 
-	<!-- Menu -->
-
-	<div class="menu">
-		<div class="menu_container">
-			<div class="menu_background"></div>
-			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-			<div class="menu_content d-flex flex-column align-items-center justify-content-start">
-				<nav class="menu_nav">
-					<ul class="d-flex flex-column align-items-center justify-content-start">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="artists.html">Artists</a></li>
-						<li><a href="#">Download Music</a></li>
-						<li><a href="blog.html">News</a></li>
-						<li><a href="contact.html">Contact</a></li>
+				<!--sidebar nav start-->
+					<ul class="nav nav-pills nav-stacked custom-nav">
+						<li class="active"><a href="index.html"><i class="lnr lnr-home"></i><span>Home</span></a></li>
+						<li><a href="albums.html"><i class="lnr lnr-music-note"></i> <span>Albums</span></a></li>						
+						<li><a href="artists.html"><i class="lnr lnr-users"></i> <span>Artists</span></a></li> 
+						<li><a href="#" data-toggle="modal" data-target="#myModal1"><i class="fa fa-th"></i><span>Apps</span></a></li>
+						<li><a href="contact.html"><i class="fa fa-thumb-tack"></i><span>Contact</span></a>
+						
+						</li>     
 					</ul>
-				</nav>
+				<!--sidebar nav end-->
 			</div>
 		</div>
-	</div>
-
-	<!-- Home -->
-
-	<div class="home">
-		
-		<!-- Home Slider -->
-		<div class="home_slider_container">
-			<div class="owl-carousel owl-theme home_slider">
-				
-				<!-- Slide -->
-				<div class="slide">
-					<div class="background_image" style="background-image:url(images/index.jpg)"></div>
-					<div class="home_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content">
-										<div class="home_title_container text-center">
-											<div class="home_title islive text-center"><h1>your <span>music.</span></h1></div>
-										</div>
-										<div class="tickets_form_container">
-											<form action="#" class="tickets_form">
-												<div class="d-flex flex-md-row flex-column align-items-start justify-content-md-between justify-content-start">
-													<div class="tickets_form_inputs d-flex flex-row align-items-start justify-content-between">
-														<div class="custom_dropdown tickets_form_input cdd">
-															<div class="custom_dropdown_selected cdd">Event</div>
-															<ul class="cdd">
-																<li>Event 1</li>
-																<li>Event 2</li>
-																<li>Event 3</li>
-															</ul>
-														</div>
-														<input type="text" class="tickets_form_input" placeholder="Tickets" required="required">
-													</div>
-													<button class="tickets_form_button button"><span>get your tickets</span></button>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
+		 	 <!-- /w3layouts-agile -->
+					<!-- app-->
+			<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>178music mobile app on your smartphone!</h3>
+							<p>Download and Avail Special Songs Videos and Audios.</p>
+							<div class="app-devices">
+								<h5>Gets the app from</h5>
+								<a href="#"><img src="images/1.png" alt=""></a>
+								<a href="#"><img src="images/2.png" alt=""></a>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/apps.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<!-- Slide -->
-				<div class="slide">
-					<div class="background_image" style="background-image:url(images/index.jpg)"></div>
-					<div class="home_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content">
-										<div class="home_title_container text-center">
-											<div class="home_title islive text-center"><h1>your <span>music.</span></h1></div>
-										</div>
-										<div class="tickets_form_container">
-											<form action="#" class="tickets_form">
-												<div class="d-flex flex-md-row flex-column align-items-start justify-content-md-between justify-content-start">
-													<div class="tickets_form_inputs d-flex flex-row align-items-start justify-content-between">
-														<div class="custom_dropdown tickets_form_input cdd">
-															<div class="custom_dropdown_selected cdd">Event</div>
-															<ul class="cdd">
-																<li>Event 1</li>
-																<li>Event 2</li>
-																<li>Event 3</li>
-															</ul>
-														</div>
-														<input type="text" class="tickets_form_input" placeholder="Tickets" required="required">
-													</div>
-													<button class="tickets_form_button button"><span>get your tickets</span></button>
-												</div>
-											</form>
-										</div>
+			</div>
+			<!-- //app-->
+ 	 <!-- /w3l-agile -->
+		<!-- signup -->
+			<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+							<div class="sign-grids">
+								<div class="sign">
+									<div class="sign-left">
+										<ul>
+											<li><a class="fb" href="facebook.com"><i></i>Sign in with Facebook</a></li>
+											<li><a class="goog" href="google.com"><i></i>Sign in with Google</a></li>
+											<li><a class="linkin" href="linkedin"><i></i>Sign in with Linkedin</a></li>
+										</ul>
 									</div>
+									<div class="sign-right">
+										<form action="userpage.html" method="post">
+
+											<h3>Create your account </h3>
+											<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+											<input type="text" value="Mobile number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mobile number';}" required="">
+											<input type="text" value="Email id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email id';}" required="">	
+											<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">	
+											
+											<input type="submit" value="CREATE ACCOUNT" >
+										</form>
+									</div>
+									<div class="clearfix"></div>								
 								</div>
+								<p>By logging in you agree to our <span>Terms and Conditions</span> and <span>Privacy Policy</span></p>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+			<!-- //signup -->
+ 	 <!-- /w3l-agile -->
+		<!-- left side end-->
+		<!-- main content start-->
+		<div class="main-content">
+			<!-- header-starts -->
+			<div class="header-section">
+			<!--toggle button start-->
+			<a class="toggle-btn  menu-collapsed"><i class="fa fa-bars"></i></a>
+			<!--toggle button end-->
+			<!--notification menu start -->
+				<div class="menu-right">
+					<div class="profile_details">		
+						  <div class="col-md-4 serch-part">
+								<div id="sb-search" class="sb-search">
+									<form action="#" method="post">
 
-				<!-- Slide -->
-				<div class="slide">
-					<div class="background_image" style="background-image:url(images/index.jpg)"></div>
-					<div class="home_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content">
-										<div class="home_title_container text-center">
-											<div class="home_title islive text-center"><h1>your <span>music.</span></h1></div>
-										</div>
-										<div class="tickets_form_container">
-											<form action="#" class="tickets_form">
-												<div class="d-flex flex-md-row flex-column align-items-start justify-content-md-between justify-content-start">
-													<div class="tickets_form_inputs d-flex flex-row align-items-start justify-content-between">
-														<div class="custom_dropdown tickets_form_input cdd">
-															<div class="custom_dropdown_selected cdd">Event</div>
-															<ul class="cdd">
-																<li>Event 1</li>
-																<li>Event 2</li>
-																<li>Event 3</li>
-															</ul>
-														</div>
-														<input type="text" class="tickets_form_input" placeholder="Tickets" required="required">
-													</div>
-													<button class="tickets_form_button button"><span>get your tickets</span></button>
-												</div>
-											</form>
-										</div>
-									</div>
+										<input class="sb-search-input" placeholder="Search" type="search" name="search" id="search">
+										<input class="sb-search-submit" type="submit" value="">
+										<span class="sb-icon-search"> </span>
+									</form>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
+							  <!-- search-scripts -->
+									<script src="js/classie.js"></script>
+									<script src="js/uisearch.js"></script>
+										<script>
+											new UISearch( document.getElementById( 'sb-search' ) );
+										</script>
+									<!-- //search-scripts -->
+											 <!---->
+											  <div class="col-md-4 player">
+													<div class="audio-player">
+														<audio id="audio-player"  controls="controls">
+														<source src="media/Blue Browne.ogg" type="audio/ogg"></source>
+																<source src="media/Blue Browne.mp3" type="audio/mpeg"></source>
+																<source src="media/Georgia.ogg" type="audio/ogg"></source>
+																<source src="media/Georgia.mp3" type="audio/mpeg"></source></audio>
+														</div>
+												<!---->
+												<script type="text/javascript">
+													$(function(){
+													  $('#audio-player').mediaelementplayer({
+														alwaysShowControls: true,
+														features: ['playpause','progress','volume'],
+														audioVolume: 'horizontal',
+														iPadUseNativeControls: true,
+														iPhoneUseNativeControls: true,
+														AndroidUseNativeControls: true
+													});
+												 });
+												</script>
+												<!--audio-->
+													<link rel="stylesheet" type="text/css" media="all" href="css/audio.css">
+													<script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+													<!---->
 
-			</div>
 
-			<!-- Home Slider Navigation -->
-			<div class="home_slider_nav"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-
-			<!-- Home Social -->
-			<div class="home_social">
-				<div class="d-flex flex-row align-items-center justify-content-start">
-					<div class="home_social_text">follow</div>
-					<div class="home_social_list">
-						<ul class="d-flex flex-row align-items-center justify-content-start">
-							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<!-- Scroll Down -->
-			<div class="scroll_down scroll_down_link" data-scroll-to=".tours">
-				<a href="#"></a>
-				<div class="d-flex flex-row align-items-center justify-content-start">
-					<div>scroll down</div>
-					<div class="scroll_arrows d-flex flex-column align-items-start justify-content-start">
-						<img src="images/arrow_down.png" alt="">
-						<img src="images/arrow_down.png" alt="">
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<!-- Song -->
-
-	<div class="song">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/song.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="song_content">
-
-						<!-- Player -->
-						<div class="single_player_container">
-							<div class="single_player d-flex flex-row align-items-center justify-content-start">
-								<div id="jplayer_1" class="jp-jplayer"></div>
-								<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-									<div class="jp-gui jp-interface d-flex flex-lg-row flex-column align-items-start justify-content-start">
-
-										<!-- Player Controls -->
-										<div class="player_controls_box d-flex flex-row align-items-start justify-content-start">
-											<div class="order-lg-1 order-2">
-												<div class="player_title">song of the week</div>
-												<div class="jp-controls-holder player_controls ml-auto d-flex flex-row align-items-start justify-content-start">
-													<button class="jp-play player_button" tabindex="0"></button>
-													<button class="jp-stop player_button" tabindex="0"></button>
-												</div>
+												<!--//-->
+												<ul class="next-top">
+													<li><a class="ar" href="#"> <img src="images/arrow.png" alt=""/></a></li>
+													<li><a class="ar2" href="#"><img src="images/arrow2.png" alt=""/></i></a></li>
+														
+											 </ul>	
 											</div>
-											<div class="song_image ml-lg-auto order-lg-2 order-1"><img src="images/song_1.jpg" alt=""></div>
-										</div>
-
-										<!-- Progress Bar -->
-										<div class="player_bars d-flex flex-row align-items-start justify-content-start">
-											<div class="player_progress_box">
-												<div class="jp-current-time" role="timer" aria-label="time">00:00</div>
-												<div class="song_info">
-													<div class="jp-artist" aria-label="title">Michael Smith</div>
-													<div class="jp-title" aria-label="title"></div>
-												</div>
-												<div class="jp-progress">
-													<div class="jp-seek-bar">
-														<div>
-															<div class="jp-play-bar"><span></span></div>
-														</div>
+											<div class="col-md-4 login-pop">
+												<div id="loginpop"> <a href="#" id="loginButton"><span>Login <i class="arrow glyphicon glyphicon-chevron-right"></i></span></a><a class="top-sign" href="#" data-toggle="modal" data-target="#myModal5"><i class="fa fa-sign-in"></i></a>
+														<div id="loginBox">  
+												<form action="userpage.html" method="post" id="loginForm">
+																	<fieldset id="body">
+																		<fieldset>
+																			  <label for="email">Email Address</label>
+																			  <input type="text" name="email" id="email">
+																		</fieldset>
+																		<fieldset>
+																				<label for="password">Password</label>
+																				<input type="password" name="password" id="password">
+																		 </fieldset>
+																		<input type="submit" id="login" value="Sign in">
+																		<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+																	</fieldset>
+																<span><a href="#">Forgot your password?</a></span>
+														 </form>
 													</div>
 												</div>
-												<div class="jp-duration ml-auto" role="timer" aria-label="duration">02:33</div>
-											</div>
 
-											<!-- Volume Controls -->
-											<div class="jp-volume-controls ml-lg-auto">
-												<div class="mute_button">
-													<button class="jp-mute" tabindex="0"></button>
-												</div>
-												<div class="d-flex flex-row align-items-center justify-content-start">
-													<div class="jp-volume-bar">
-														<div>
-															<div class="jp-volume-bar-value"></div>
-														</div>
-													</div>
-												</div>
 											</div>
-										</div>
-										
-									</div>
-									<div class="jp-no-solution">
-										<span>Update Required</span>
-										To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
-									</div>
+										<div class="clearfix"> </div>
 								</div>
+							<!-------->
+						</div>
+					<div class="clearfix"></div>
+				</div>
+			<!--notification menu end -->
+			<!-- //header-ends -->
+ 	 <!-- /w3l-agileits -->
+		<!-- //header-ends -->
+			<div id="page-wrapper">
+				<div class="inner-content">
+				
+				      <div class="music-left">
+								<!--banner-section-->
+							
+								<br>
+								<div class="tittle-head">
+									<h3 class="tittle">Latest Albums <span class="new"><a style="color: white" href="albums.html">View All</a></span> </h3>
+									
+									<div class="clearfix"> </div>
+								</div>
+								
+							<div class="banner-section">
+								<div class="banner">
+									 <div class="callbacks_container">
+										<ul class="rslides callbacks callbacks1" id="slider4">
+											   	<li>
+														<div class="banner-img">
+															 <img src="images/olamidealbum.jpg" class="img-responsive" alt="">
+														 </div>
+														<div class="banner-info">
+														              <a class="trend" href="single.html">VIEW</a>
+																	  <h3>The glory </h3>
+																	  <p>Album by <span style="color:blanchedalmond">Olamide</span></p>
+														 </div>
+
+												</li>
+												<li>
+													<div class="banner-img">
+														 <img src="images/zlatanzanku.jpg" class="img-responsive" alt="">
+													 </div>
+													<div class="banner-info">
+																				<a class="trend" href="single.html">VIEW</a>
+																	<h3 style="color: #00293C;" ><b>Zanku</b></h3>
+																	<p style="color: #00293C"><b>Album by</b> <span style="color:#00293C"><b>Zlatan</b></span></p>
+													 </div>
+
+											</li>
+												<li>
+													<div class="banner-img">
+															 <img src="images/burnaboyafricangiant.jpg" class="img-responsive" alt="">
+														 </div>
+														<div class="banner-info">
+																	  <a class="trend" href="single.html">VIEW</a>
+																	  <h3 style="color:#00293C">African Giant</h3>
+																	  <p style="color:#00293C"><b>Album by </b><span style="color:#00293C"><b>BurnaBoy</b></span></p>
+														 </div>
+
+
+												</li>
+												<li>
+												 <div class="banner-img">
+															 <img src="images/phynoAlbum.jpg" class="img-responsive" alt="">
+														 </div>
+														<div class="banner-info"> 
+														             <a class="trend" href="single.html">VIEW</a>
+																	  <h3 style="color:#F62A00">Deal With it</h3>
+																	  <p style="color:#F62A00">Album by <span style="color:#F62A00">Phyno</span></p>
+														 </div>
+
+												 	 <!-- /w3layouts-agileits -->
+												</li>
+											</ul>
+										</div>
+										<!--banner-->
+									<script src="js/responsiveslides.min.js"></script>
+								 <script>
+									// You can also use "$(window).load(function() {"
+									$(function () {
+									  // Slideshow 4
+									  $("#slider4").responsiveSlides({
+										auto: true,
+										pager:true,
+										nav:true,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+										  $('.events').append("<li>before event fired.</li>");
+										},
+										after: function () {
+										  $('.events').append("<li>after event fired.</li>");
+										}
+									  });
+								
+									});
+								  </script>
+								<div class="clearfix"> </div>
 							</div>
-						</div>
+						</div>	
+				<!--//End-banner-->
+					<!--albums-->
+					<!-- pop-up-box --> 
+							<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all">
+							<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+							 <script>
+									$(document).ready(function() {
+									$('.popup-with-zoom-anim').magnificPopup({
+										type: 'inline',
+										fixedContentPos: false,
+										fixedBgPos: true,
+										overflowY: 'auto',
+										closeBtnInside: true,
+										preloader: false,
+										midClick: true,
+										removalDelay: 300,
+										mainClass: 'my-mfp-zoom-in'
+									});
+									});
+							</script>		
+							
+					<!--//pop-up-box -->
+						<div class="albums">
+								<div class="tittle-head">
+									<h3 class="tittle">New Releases <span class="new">New</span></h3>
+									<a href="index.html"><h4 class="tittle">See all</h4></a>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="col-md-3 content-grid">
+								<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/v1.jpg" title="allbum-name"></a>
+							
+								<span>BIGNAP - Dream Ahead</span>
+								<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Listen now</a>
+								<a class="button play-icon popup-with-zoom-anim" href="buy.html">Buy #30</a>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+							</div>
+						
 
-	<!-- Tours -->
+							<div id="small-dialog" class="mfp-hide">
+								<audio controls>
 
-	<div class="tours">
-		<div class="container">
-			<div class="row row-lg-eq-height">
-				
-				<!-- Add -->
-				<div class="col-lg-4 order-lg-1 order-2 tours_col">
-					<div class="extra d-flex flex-column align-items-center justify-content-between">
-						<div class="background_image" style="background-image:url(images/extra_1.jpg)"></div>
-						<div class="extra_frame"></div>
-						<div class="extra_text">it's awesome</div>
-						<div class="extra_title_container">
-							<div class="extra_year">2019</div>
-							<div class="extra_title">world tour</div>
-							<div class="extra_subtitle">november 2018</div>
-						</div>
-						<div class="button extra_button"><a href="#">get your tickets</a></div>
-					</div>
-				</div>
+									<source src = "media/Georgia.mp3" type = "audio/mpeg"/>
+										Your browser does not support the audio element.
+								</audio>
+								
+							</div>
+							<div class="col-md-3 content-grid">
+								<a class="play-icon popup-with-zoom-anim" href="#small-dialog2"><img src="images/v2.jpg" title="allbum-name"></a>
+								
+								<span>SPINAL - D</span>
+							
+								<a class="button play-icon popup-with-zoom-anim" href="#small-dialog2">Listen now</a>
+								<a class="button play-icon popup-with-zoom-anim" href="buy.html">Buy #50</a>
 
-				<!-- Tours Content -->
-				<div class="col-lg-8 order-lg-2 order-1">
-					<div class="tours_content">
-						<div class="section_title"><h1>Tour Dates</h1></div>
-						<div class="tours_list_container">
-							<ul class="tours_list">
+							</div>
+							<div id="small-dialog2" class="mfp-hide">
+								<audio controls>
 
-								<!-- Tour -->
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div class="tour_info">
-										<div class="tour_date">Sun, 21 Oct 2018</div>
-										<div class="tour_name"><a href="#">The O2</a></div>
-										<div class="tour_location">London, United Kingdom</div>
+									<source src = "media/Georgia.mp3" type = "audio/mpeg"/>
+										Your browser does not support the audio element.
+								</audio>
+								
+							</div>
+
+							
+											<div class="clearfix"> </div>
+										</div>
+					<!--//End-albums-->
+						<!--//discover-view-->
+						
+						<div id = "#hotsongs" class="albums second"  >
+										<div class="tittle-head">
+											<h3 class="tittle">Hot Songs <span class="new">View</span></h3>
+											<a href="index.html"><h4 class="tittle two">See all</h4></a>
+											<div class="clearfix"> </div>
+										</div>
+											<div class="col-md-3 content-grid">
+												<a href="single.html"><img src="images/v11.jpg" title="allbum-name"></a>
+												
+												<span>BIGNAP - Dream Ahead</span>
+												<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Listen now</a>
+												<a class="button play-icon popup-with-zoom-anim" href="buy.html">Buy #30</a>
+
+											</div>
+											<div class="col-md-3 content-grid">
+													<a href="single.html"><img src="images/v22.jpg" title="allbum-name"></a>
+													<span>BIGNAP - Dream Ahead</span>
+													<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Listen now</a>
+													<a class="button play-icon popup-with-zoom-anim" href="buy.html">Buy #30</a>
+	
+												</div>
+											<div class="clearfix"> </div>
 									</div>
-									<div class="button tour_button ml-auto"><a href="#">get your tickets</a></div>
-								</li>
+								<!--//discover-view-->
+							</div>
+							<!--//music-left-->
+						    <!--/music-right-->
+						   <div class="music-right">
+								<!--/video-main-->
+						
+								<!-- script for play-list -->
+				<link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css">
+				<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+				<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+				<script type="text/javascript">
+				//<![CDATA[
+				$(document).ready(function(){
 
-								<!-- Tour -->
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div class="tour_info">
-										<div class="tour_date">Mon, 22 Oct 2018</div>
-										<div class="tour_name"><a href="#">The O2</a></div>
-										<div class="tour_location">London, United Kingdom</div>
-									</div>
-									<div class="button tour_button ml-auto"><a href="#">get your tickets</a></div>
-								</li>
+					new jPlayerPlaylist({
+						jPlayer: "#jquery_jplayer_1",
+						cssSelectorAncestor: "#jp_container_1"
+					}, [
+						
+						{
+							title:"1. Ellie-Goulding",
+							artist:"",
+							mp4: "video/Ellie-Goulding.mp4",
+							ogv: "video/Ellie-Goulding.ogv",
+							webmv: "video/Ellie-Goulding.webm",
+							poster:"video/play1.png"
+						},
+						{
+							title:"2. Mark-Ronson-Uptown",
+							artist:"",
+							mp4: "video/Mark-Ronson-Uptown.mp4",
+							ogv: "video/Mark-Ronson-Uptown.ogv",
+							webmv: "video/Mark-Ronson-Uptown.webm",
+							poster:"video/play2.png"
+						},
+						{
+							title:"3. Ellie-Goulding",
+							artist:"",
+							mp4: "video/Ellie-Goulding.mp4",
+							ogv: "video/Ellie-Goulding.ogv",
+							webmv: "video/Ellie-Goulding.webm",
+							poster:"video/play1.png"
+						},
+						{
+							title:"4. Maroon-Sugar",
+							artist:"",
+							mp4: "video/Maroon-Sugar.mp4",
+							ogv: "video/Maroon-Sugar.ogv",
+							webmv: "video/Maroon-Sugar.webm",
+							poster:"video/play4.png"
+						},
+						{
+							title:"5. Pharrell-Williams",
+							artist:"",
+							mp4: "video/Pharrell-Williams.mp4",
+							ogv: "video/Pharrell-Williams.ogv",
+							webmv: "video/Pharrell-Williams.webm",
+							poster:"video/play5.png"
+						},
+						{
+							title:"6. Ellie-Goulding",
+							artist:"",
+							mp4: "video/Ellie-Goulding.mp4",
+							ogv: "video/Ellie-Goulding.ogv",
+							webmv: "video/Ellie-Goulding.webm",
+							poster:"video/play1.png"
+						},
+						{
+							title:"7. Pharrell-Williams",
+							artist:"",
+							mp4: "video/Pharrell-Williams.mp4",
+							ogv: "video/Pharrell-Williams.ogv",
+							webmv: "video/Pharrell-Williams.webm",
+							poster:"video/play5.png"
+						}
+					], {
+						swfPath: "../../dist/jplayer",
+						supplied: "webmv,ogv,mp4",
+						useStateClassSkin: true,
+						autoBlur: false,
+						smoothPlayBar: true,
+						keyEnabled: true
+					});
 
-								<!-- Tour -->
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div class="tour_info">
-										<div class="tour_date">Tue, 23 Oct 2018</div>
-										<div class="tour_name"><a href="#">The O2</a></div>
-										<div class="tour_location">London, United Kingdom</div>
-									</div>
-									<div class="button tour_button ml-auto"><a href="#">get your tickets</a></div>
-								</li>
+				});
+				//]]>
+					</script>
+			<!-- //script for play-list -->
 
-								<!-- Tour -->
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div class="tour_info">
-										<div class="tour_date">Wed, 24 Oct 2018</div>
-										<div class="tour_name"><a href="#">The O2</a></div>
-										<div class="tour_location">London, United Kingdom</div>
-									</div>
-									<div class="button tour_button ml-auto"><a href="#">get your tickets</a></div>
-								</li>
-
-							</ul>
-						</div>
-						<div class="tours_link"><a href="#">See All Tour Dates</a></div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- App -->
-
-	<div class="app">
-		<div class="container">
-			<div class="row row-lg-eq-height">
-				
-				<!-- App Image -->
-				<div class="col-lg-6 order-lg-1 order-2 app_col">
-					<div class="app_image">
-						<img src="images/app.jpg" alt="">
-					</div>
-				</div>
-
-				<!-- App Content -->
-				<div class="col-lg-6 order-lg-2 order-1">
-					<div class="app_content d-flex flex-column align-items-start justify-content-center">
-						<div class="section_title"><h1>Get Your Music Right Now!</h1></div>
-						<div class="app_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum, neque ac porttitor scelerisque, nisi nisl tincidunt enim, non aliquet diam neque sed urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum lacus suscipit sit amet</p>
-						</div>
-						<div class="stores d-flex flex-row align-items-start justify-content-start flex-wrap">
-							<div class="store"><a href="#"><img src="images/appstore.png" alt=""></a></div>
-							<div class="store"><a href="#"><img src="images/googleplay.png" alt=""></a></div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Featured -->
-
-	<div class="featured">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center"><h1>Featured Albums</h1></div>
-					<div class="featured_list">
-						<div id="jplayer_2" class="jp-jplayer"></div>
-						<div id="jp_container_2" class="jp-audio" role="application" aria-label="media player">
-							<div class="jp-type-playlist">
-								<div class="jp-playlist">
-									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<li></li>
+								<!--//video-main-->
+								<!--/app_store-->
+									  <div class="apps">
+												<h3 class="hd-tittle">178music now available in</h3>
+												<div class="banner-button">
+													<a href="#"><img src="images/1.png" alt=""></a>
+												</div>
+												<div class="banner-button green-button">
+													<a href="#"><img src="images/2.png" alt=""></a>
+												</div>
+													<div class="clearfix"></div>
+										</div>
+								  <!--//app_store-->
+						         <!--/start-paricing-tables-->
+									<div class="price-section">
+											<div class="pricing-inner">
+												<h3 class="hd-tittle">Ever Green</h3>
+												<div class="pricing">
+													<div class="price-top">
+														
+														<h4>Sunny Ade</h4>
+													</div>
+													<div class="price-bottom">
+														<ul>
+															<li><a class="icon" href="#"><i class="glyphicon glyphicon-play"></i></a><a class="text" href="#">Song 1</a><div class="clearfix"></div></li>
+															<li><a class="icon" href="#"><i class="glyphicon glyphicon-play"></i></a><a class="text" href="#">Song 2</a><div class="clearfix"></div></li>
+															<li><a class="icon" href="#"><i class="glyphicon glyphicon-play"></i></a><a class="text" href="#">Song 3</a><div class="clearfix"></div></li>
+															<li><a class="icon" href="#"><i class="glyphicon glyphicon-play"></i></a><a class="text" href="#">Song 4</a><div class="clearfix"></div></li>
+														</ul>
+														<a href="#" class="price">More</a>
+													</div>
+												</div>
+												<div class="pricing two">
+													<div class="price-top">
+														<h4>Ebenezer Obe</h4>
+													</div>
+													<div class="price-bottom">
+														<ul>
+																<li><a class="icon" href="#"><i class="glyphicon glyphicon-play"></i></a><a class="text" href="#">Song 1</a><div class="clearfix"></div></li>
+																<li><a class="icon" href="#"><i class="glyphicon glyphicon-play"></i></a><a class="text" href="#">Song 2</a><div class="clearfix"></div></li>
+																<li><a class="icon" href="#"><i class="glyphicon glyphicon-play"></i></a><a class="text" href="#">Song 3</a><div class="clearfix"></div></li>
+																<li><a class="icon" href="#"><i class="glyphicon glyphicon-play"></i></a><a class="text" href="#">Song 4</a><div class="clearfix"></div></li>
 									</ul>
+														<a href="#" class="price">More</a>
+													</div>
+												</div>
+													<div class="clearfix"></div>
+												</div>
+												<!--//end-pricing-tables-->
+												</div>
+											</div>
+													 <!--//music-right-->
+											<div class="clearfix"></div>
+			 	 <!-- /w3l-agile-its -->
+										</div>
+						<!--body wrapper start-->
+						
+						<div class="review-slider">
+								<div class="tittle-head">
+									<h3 class="tittle">Featured Albums <span class="new"> New</span></h3>
+									<div class="clearfix"> </div>
 								</div>
-								<div class="jp-no-solution">
-									<span>Update Required</span>
-									To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- News -->
-
-	<div class="news">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title"><h1>Latest News</h1></div>
-				</div>
-			</div>
-			<div class="row news_row">
-				
-				<!-- News Post -->
-				<div class="col-xl-4 col-md-6">
-					<div class="news_post image_top">
-						<div class="news_post_image"><img src="images/news_1.jpg" alt=""></div>
-						<div class="news_post_content">
-							<div class="news_post_date"><a href="#">Oct 19, 2018</a></div>
-							<div class="news_post_title"><a href="#">Music Seminary at Festival</a></div>
-							<div class="news_post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum, neque ac porttitor scelerisque, nisi nisl tincidunt enim, non aliquet diam neque sed urna.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- News Post -->
-				<div class="col-xl-4 col-md-6">
-					<div class="news_post image_bottom d-flex flex-column align-items-start justify-content-start">
-						<div class="news_post_content order-md-1 order-2">
-							<div class="news_post_date"><a href="#">Oct 19, 2018</a></div>
-							<div class="news_post_title"><a href="#">Festival list for 2019</a></div>
-							<div class="news_post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum, neque ac porttitor scelerisque, nisi nisl tincidunt enim, non aliquet diam neque sed urna.</p>
-							</div>
-						</div>
-						<div class="news_post_image order-md-2 order-1"><img src="images/news_2.jpg" alt=""></div>
-					</div>
-				</div>
-
-				<!-- News Post -->
-				<div class="col-xl-4 col-md-6">
-					<div class="news_post image_top">
-						<div class="news_post_image"><img src="images/news_3.jpg" alt=""></div>
-						<div class="news_post_content">
-							<div class="news_post_date"><a href="#">Oct 19, 2018</a></div>
-							<div class="news_post_title"><a href="#">New album release in 2019</a></div>
-							<div class="news_post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum, neque ac porttitor scelerisque, nisi nisl tincidunt enim, non aliquet diam neque sed urna.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<div class="container">
-			<div class="row">
-
-				<!-- Newsletter Content -->
-				<div class="col-xl-6">
-					<div class="newsletter_content">
-						<div class="section_title"><h1>Subscribe & Follow</h1></div>
-						<div class="newsletter_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum, neque ac porttitor scelerisque.</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- Newsletter Form -->
-				<div class="col-xl-6 nl_col">
-					<div class="newsletter_form_container d-flex flex-column align-items-start justify-content-end">
-						<form action="#" class="newsletter_form" id="newsletter_form">
-							<div class="d-flex flex-row align-items-start justify-content-between">
-								<input type="email" class="newsletter_input" placeholder="Your E-mail" required="required">
-								<button class="button newsletter_button"><span>subscribe</span></button>
-							</div>
-						</form>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="background_image" style="background-image:url(images/footer.jpg)"></div>
-		<div class="footer_content">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-
-						<!-- Logo -->
-						<div class="logo">
-							<a href="#" class="d-flex flex-row align-items-end justify-content-start">
-								<span class="logo_bars d-flex flex-row align-items-end justify-content-between"><span></span><span></span><span></span><span></span><span></span></span>
-								<span class="logo_text">music</span>
-							</a>
-						</div>
-
-						<!-- Footer Social -->
-						<div class="footer_social">
-							<ul class="d-flex flex-row align-items-center justify-content-center">
-								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+								 <ul id="flexiselDemo1">
+								<li>
+									<a href="single.html"><img src="images/v1.jpg" alt=""/></a>
+									<div class="slide-title"><h4>Adele21 </div>
+									<div class="date-city">
+										<h5>Jan-02-16</h5>
+										<div class="buy-tickets">
+											<a href="single.html">READ MORE</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="single.html"><img src="images/v2.jpg" alt=""/></a>
+									<div class="slide-title"><h4>Adele21</h4></div>
+									<div class="date-city">
+										<h5>Jan-02-16</h5>
+										<div class="buy-tickets">
+											<a href="single.html">READ MORE</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="single.html"><img src="images/v3.jpg" alt=""/></a>
+									<div class="slide-title"><h4>Shomlock</h4></div>
+									<div class="date-city">
+										<h5>Jan-02-16</h5>
+										<div class="buy-tickets">
+											<a href="single.html">READ MORE</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="single.html"><img src="images/v4.jpg" alt=""/></a>
+									<div class="slide-title"><h4>Stuck on a feeling</h4></div>
+									<div class="date-city">
+										<h5>Jan-02-16</h5>
+										<div class="buy-tickets">
+											<a href="single.html">READ MORE</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="single.html"><img src="images/v5.jpg" alt=""/></a>
+									<div class="slide-title"><h4>Ricky Martine </h4></div>
+									<div class="date-city">
+										<h5>Jan-02-16</h5>
+										<div class="buy-tickets">
+											<a href="single.html">READ MORE</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="single.html"><img src="images/v6.jpg" alt=""/></a>
+									<div class="slide-title"><h4>Ellie Goluding </h4></div>
+									<div class="date-city">
+										<h5>Jan-02-16</h5>
+										<div class="buy-tickets">
+											<a href="single.html">READ MORE</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="single.html"><img src="images/v6.jpeg" alt=""/></a>
+									<div class="slide-title"><h4>Fifty Shades </h4></div>
+									<div class="date-city">
+										<h5>Jan-02-16</h5>
+										<div class="buy-tickets">
+											<a href="single.html">READ MORE</a>
+										</div>
+									</div>
+								</li>
 							</ul>
+							<script type="text/javascript">
+						$(window).load(function() {
+							
+						  $("#flexiselDemo1").flexisel({
+								visibleItems: 5,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 3000,    		
+								pauseOnHover: false,
+								enableResponsiveBreakpoints: true,
+								responsiveBreakpoints: { 
+									portrait: { 
+										changePoint:480,
+										visibleItems: 2
+									}, 
+									landscape: { 
+										changePoint:640,
+										visibleItems: 3
+									},
+									tablet: { 
+										changePoint:800,
+										visibleItems: 4
+									}
+								}
+							});
+							});
+						</script>
+						<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
 						</div>
-
+							<div class="clearfix"></div>
+						<!--body wrapper end-->
+ 	 <!-- /w3l-agile -->
 					</div>
+			  <!--body wrapper end-->
+			     <div class="footer">
+				<div class="footer-grid">
+					<h3>Navigation</h3>
+					<ul class="list1">
+					  <li><a href="index.html">Home</a></li>
+					  <li><a href="artists.html">All Songs</a></li>
+					  <li><a href="albums.html">Albums</a></li>
+					  <li><a href="albums.html">New Collections</a></li>
+					  <li><a href="contact.html">Contact</a></li>
+				    </ul>
+				</div>
+				<div class="footer-grid">
+					<h3>My Account</h3>
+				    <ul class="list1">
+					  <li><a href="#" data-toggle="modal" data-target="#myModal5">Your Account</a></li>
+					  <li><a href="#">Personal information</a></li>
+					  <li><a href="#">Discount</a></li>
+					  <li><a href="#">Orders history</a></li>
+				    </ul>
+				</div>
+				<div class="footer-grid">
+					<h3>Our Support</h3>
+					<ul class="list1">
+					  <li><a href="contact.html">Site Map</a></li>
+					  <li><a href="#">Search Terms</a></li>
+					  <li><a href="#">Advanced Search</a></li>
+					  <li><a href="contact.html">Contact Us</a></li>
+					  <li><a href="#">Mobile</a></li>
+				    </ul>
+				  </div>
+					  <div class="footer-grid">
+						<h3>Newsletter</h3>
+						<p class="footer_desc">No news for now</p>
+						<div class="search_footer">
+						 <form>
+						   <input type="text" placeholder="Email...." required="">
+						  <input type="submit" value="Submit">
+						  </form>
+						</div>
+					 </div>
+					 <div class="footer-grid footer-grid_last">
+						<h3>About Us</h3>
+						<p class="footer_desc">We are committed to serving you and giving you the latest music here</p>
+						<p class="f_text">Phone:  &nbsp;<span><a href="tel:+2348023528979">08148715592</a></span></p>
+						<p class="email">Email : &nbsp;<span><a href="mailto:178music@gmail.com">178music@gmail.com</a></span></p>	
+					 </div>
+					 <div class="clearfix"> </div>
 				</div>
 			</div>
-		</div>
-		<div class="footer_bar">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="copyright text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-					</div>
-				</div>
-			</div>
-		</div>
-			
-	</footer>
-</div>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="styles/bootstrap-4.1.2/popper.js"></script>
-<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
-<script src="plugins/jPlayer/jquery.jplayer.min.js"></script>
-<script src="plugins/jPlayer/jplayer.playlist.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/progressbar/progressbar.min.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
-<script src="js/custom.js"></script>
+        <!--footer section start-->
+			<footer>
+			   <p>&copy 2019 178music.com All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts.</a></p>
+			</footer>
+        <!--footer section end-->
+ 	 <!-- /w3l-agile -->
+      <!-- main content end-->
+   </section>
+  
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
